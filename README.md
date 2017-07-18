@@ -80,13 +80,26 @@ and the #vyos IRC channel on Freenode.
 Don't forget to add unit tests for things you add or change!
 
 If you are new to OCaml, you need to install [opam](http://opam.ocaml.org/)
+
+### on FreeBSD
+
+```
+pkg install ocaml-opam-1.2.2_2 gmake pkgconf
+```
+
+### on Debian(Jessie)
+
+```
+apt-get install opam pkg-config libpcre3 libpcre3-dev
+```
+
 first. Then install the correct version of the compiler, the build tools, and
 the build dependencies:
 
 ```
 opam switch 4.03.0
 opam install oasis
-opam install fileutils lwt ocplib-endian ounit pcre ppx_deriving_yojson sha toml xml-light batteries
+opam install fileutils lwt ocplib-endian ounit pcre ppx_deriving_yojson sha toml xml-light batteries ocaml-protoc
 ```
 
 To build the project and run the unit tests, do this:
